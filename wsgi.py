@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 
 def print_message(text):
-    printer = serial.Serial("/dev/serial/by-path/platform-fd500000.pcie-pci-0000:01:00.0-usb-0:1.1.1:1.0-port0", baudrate=19200)
+    printer = serial.Serial("/dev/serial/by-path/platform-fd500000.pcie-pci-0000:01:00.0-usb-0:1.2.1:1.0-port0", baudrate=19200)
     message = time.strftime("%d.%m.%Y %H:%M:%S")
     message += "\n"
     message += "\n".join(textwrap.wrap(text, width=24))
